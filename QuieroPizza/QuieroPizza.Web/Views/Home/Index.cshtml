@@ -1,7 +1,11 @@
-﻿
+﻿@model List<QuieroPizza.BL.Producto>
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Quiero Pizza</h2>
 
+@foreach (var producto in Model)
+{
+    <p>@producto.Descripcion</p>
+}
