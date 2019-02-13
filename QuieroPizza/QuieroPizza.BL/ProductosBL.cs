@@ -14,8 +14,13 @@ namespace QuieroPizza.BL
             producto1.Id = 1;
             producto1.Descripcion = "Pizza 6 Quesos";
 
+            var producto2 = new Producto();
+            producto2.Id = 2;
+            producto2.Descripcion = "Pizza Italiana";
+
             var listaProductos = new List<Producto>();
             listaProductos.Add(producto1);
+            listaProductos.Add(producto2);
 
             return listaProductos;
         }
