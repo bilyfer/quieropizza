@@ -22,5 +22,11 @@ namespace QuieroPizza.BL
             ListadeProductos = _contexto.Productos.ToList();
             return ListadeProductos;
         }
+
+        public void GuardarProducto(Producto producto)
+        {
+            _contexto.Productos.Add(producto);
+            _contexto.SaveChanges();
+        }
     }
 }
