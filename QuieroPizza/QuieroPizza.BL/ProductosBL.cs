@@ -23,9 +23,25 @@ namespace QuieroPizza.BL
             return ListadeProductos;
         }
 
+        public Producto ObtenerProducto(int id)
+        {
+            var producto = _contexto.Productos.Find(id);
+
+            return producto;
+        }
+
         public void GuardarProducto(Producto producto)
         {
-            _contexto.Productos.Add(producto);
+            if (producto.Id == 0)
+            {
+                _contexto.Productos.Add(producto);
+            } else
+            {
+                var productoExistente = _contexto.Productos.Find(producto.Id);
+                productoExistente.Descripcion = producto.Descripcion;
+                productoExistente.Precio = producto.Precio;
+            }
+
             _contexto.SaveChanges();
         }
     }

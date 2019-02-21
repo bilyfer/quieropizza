@@ -38,5 +38,20 @@ namespace QuieroPizza.WebAdmin.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult Editar(int id)
+        {
+            var producto = _productosBL.ObtenerProducto(id);
+
+            return View(producto);
+        }
+
+        [HttpPost]
+        public ActionResult Editar(Producto producto)
+        {
+            _productosBL.GuardarProducto(producto);
+
+            return RedirectToAction("Index");
+        }
     }
 }
