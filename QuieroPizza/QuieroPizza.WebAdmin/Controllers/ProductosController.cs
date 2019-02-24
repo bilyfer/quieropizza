@@ -31,6 +31,7 @@ namespace QuieroPizza.WebAdmin.Controllers
             var nuevoProducto = new Producto();
             var categorias = _categoriasBL.ObtenerCategorias();
 
+
             ViewBag.CategoriaId = 
                 new SelectList(categorias, "Id", "Descripcion");
 
@@ -67,10 +68,6 @@ namespace QuieroPizza.WebAdmin.Controllers
         public ActionResult Detalle(int id)
         {
             var producto = _productosBL.ObtenerProducto(id);
-            var categorias = _categoriasBL.ObtenerCategorias();
-
-            ViewBag.CategoriaId =
-                new SelectList(categorias, "Id", "Descripcion", producto.CategoriaId);
 
             return View(producto);
         }
@@ -78,10 +75,6 @@ namespace QuieroPizza.WebAdmin.Controllers
         public ActionResult Eliminar(int id)
         {
             var producto = _productosBL.ObtenerProducto(id);
-            var categorias = _categoriasBL.ObtenerCategorias();
-
-            ViewBag.CategoriaId =
-                new SelectList(categorias, "Id", "Descripcion", producto.CategoriaId);
 
             return View(producto);
         }
