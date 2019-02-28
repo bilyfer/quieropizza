@@ -31,6 +31,7 @@ namespace QuieroPizza.WebAdmin.Controllers
             var nuevoProducto = new Producto();
             var categorias = _categoriasBL.ObtenerCategorias();
 
+
             ViewBag.CategoriaId = 
                 new SelectList(categorias, "Id", "Descripcion");
 
