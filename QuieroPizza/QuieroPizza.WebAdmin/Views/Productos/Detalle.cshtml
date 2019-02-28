@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Categoria.Descripcion)
+            @Html.DisplayNameFor(model => model.Categoria)
         </dt>
 
         <dd>
@@ -32,6 +32,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlImagen)
+        </dt>
+
+        <dd>
+            <img src="@Model.UrlImagen" alt="@Model.Descripcion" style="width:200px; height:auto;" />
         </dd>
 
         <dt>
