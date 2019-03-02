@@ -52,9 +52,9 @@ namespace QuieroPizza.WebAdmin.Controllers
 
         public ActionResult Editar(int id)
         {
-            var producto = _categoriasBL.ObtenerCategoria(id);
+            var categoria = _categoriasBL.ObtenerCategoria(id);
 
-            return View(producto);
+            return View(categoria);
         }
 
         [HttpPost]
@@ -78,22 +78,22 @@ namespace QuieroPizza.WebAdmin.Controllers
 
         public ActionResult Detalle(int id)
         {
-            var producto = _categoriasBL.ObtenerCategoria(id);
+            var categoria = _categoriasBL.ObtenerCategoria(id);
 
-            return View(producto);
+            return View(categoria);
         }
 
         public ActionResult Eliminar(int id)
         {
-            var producto = _categoriasBL.ObtenerCategoria(id);
+            var categoria = _categoriasBL.ObtenerCategoria(id);
 
-            return View(producto);
+            return View(categoria);
         }
 
         [HttpPost]
-        public ActionResult Eliminar(Categoria producto)
+        public ActionResult Eliminar(Categoria categoria)
         {
-            _categoriasBL.EliminarCategoria(producto.Id);
+            _categoriasBL.EliminarCategoria(categoria.Id);
 
             return RedirectToAction("Index");
         }

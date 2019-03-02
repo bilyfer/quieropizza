@@ -1,4 +1,4 @@
-﻿@model QuieroPizza.BL.Producto
+﻿@model QuieroPizza.BL.Cliente
 
 @{
     ViewBag.Title = "Eliminar";
@@ -6,41 +6,33 @@
 
 <h2>Eliminar</h2>
 
-<h3>&iquest;Esta seguro que desea eliminar este producto?</h3>
+<h3>&iquest;Esta seguro que desea eliminar este cliente?</h3>
 <div>
-    <h4>Producto</h4>
+    <h4>Cliente</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Descripcion)
+            @Html.DisplayNameFor(model => model.Nombre)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Descripcion)
+            @Html.DisplayFor(model => model.Nombre)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Categoria)
+            @Html.DisplayNameFor(model => model.Telefono)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Categoria.Descripcion)
+            @Html.DisplayFor(model => model.Telefono)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Precio)
+            @Html.DisplayNameFor(model => model.Direccion)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Precio)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UrlImagen)
-        </dt>
-
-        <dd>
-            <img src="@Model.UrlImagen" alt="@Model.Descripcion" style="width:200px; height:auto;" />
+            @Html.DisplayFor(model => model.Direccion)
         </dd>
 
         <dt>
