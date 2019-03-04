@@ -1,0 +1,78 @@
+﻿@model QuieroPizza.BL.Orden
+
+@{
+    ViewBag.Title = "Orden Detalle";
+}
+
+<h2>Detalle de la Orden No: @Model.Id</h2>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <td>Cliente</td>
+        <td>@Model.Cliente.Nombre</td>
+    </tr>
+    <tr>
+        <td>Telefono</td>
+        <td>@Model.Cliente.Telefono</td>
+    </tr>
+    <tr>
+        <td>Direccion</td>
+        <td>@Model.Cliente.Direccion</td>
+    </tr>
+    <tr>
+        <td>Fecha</td>
+        <td>@Model.Fecha</td>
+    </tr>
+    <tr>
+        <td>Total</td>
+        <td>@Model.Total</td>
+    </tr>
+</table>
+
+<p>
+    @Html.ActionLink("Nuevo Producto", "Crear", new { id = Model.Id })
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+        <th>
+            Producto
+        </th>
+        <th>
+            Cantidad
+        </th>
+        <th>
+            Precio
+        </th>
+        <th>
+            Total
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.ListadeOrdenDetalle) {
+    <tr>
+        <td>
+            <img src="@item.Producto.UrlImagen" alt="@item.Producto.Descripcion" style="max-width: 64px; height: auto;" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Producto.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total)
+        </td>
+        <td>
+            @Html.ActionLink("Eliminar", "Eliminar", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+
+@Html.ActionLink("Regresar a ordenes", "Index", "Ordenes")
