@@ -21,6 +21,20 @@ namespace QuieroPizza.BL
         {
             ListadeProductos = _contexto.Productos
                 .Include("Categoria")
+                .OrderBy(o => o.Categoria.Descripcion)
+                .ThenBy(o => o.Descripcion)
+                .ToList();
+
+            return ListadeProductos;
+        }
+
+        public List<Producto> ObtenerProductosActivos()
+        {
+            ListadeProductos = _contexto.Productos
+                .Include("Categoria")
+                .Where(r => r.Activo == true)
+                .OrderBy(o => o.Categoria.Descripcion)
+                .ThenBy(o => o.Descripcion)
                 .ToList();
 
             return ListadeProductos;
@@ -39,6 +53,7 @@ namespace QuieroPizza.BL
                 productoExistente.CategoriaId = producto.CategoriaId;
                 productoExistente.Precio = producto.Precio;
                 productoExistente.UrlImagen = producto.UrlImagen;
+                productoExistente.Activo = producto.Activo;
             }
             
             _contexto.SaveChanges();
