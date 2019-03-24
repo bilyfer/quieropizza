@@ -1,0 +1,12 @@
+a.cm-logo {
+    font-size: 22px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+a.cm-logo span {
+    font-weight: bold;
+}
