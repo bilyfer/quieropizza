@@ -125,26 +125,92 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="common\scripts.js" />
+    <Content Include="common\styles.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="fonts\beyond_the_mountains-webfont.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\ionicons.css" />
+    <Content Include="fonts\ionicons.svg" />
     <Content Include="Global.asax" />
+    <Content Include="images\about-1-600x400.jpg" />
+    <Content Include="images\about-2-600x400.jpg" />
+    <Content Include="images\blog-1-1000x400.jpg" />
+    <Content Include="images\blog-2-1000x400.jpg" />
+    <Content Include="images\blog-3-1000x400.jpg" />
+    <Content Include="images\footer-1.png" />
+    <Content Include="images\footer_1600x800.jpg" />
+    <Content Include="images\heading_logo.png" />
+    <Content Include="images\icin-1-200x200.png" />
+    <Content Include="images\icin-2-200x200.png" />
+    <Content Include="images\icin-3-200x200.png" />
+    <Content Include="images\icin-4-200x200.png" />
+    <Content Include="images\icon-boxes.png" />
+    <Content Include="images\icons.png" />
+    <Content Include="images\logo-white.png" />
+    <Content Include="images\menu-1-120x120.jpg" />
+    <Content Include="images\menu-2-120x120.jpg" />
+    <Content Include="images\menu-3-120x120.jpg" />
+    <Content Include="images\menu-4-120x120.jpg" />
+    <Content Include="images\menu-5-120x120.jpg" />
+    <Content Include="images\menu-6-120x120.jpg" />
+    <Content Include="images\menu-7-120x120.jpg" />
+    <Content Include="images\menu-8-120x120.jpg" />
+    <Content Include="images\pasta-1-300x300.png" />
+    <Content Include="images\pasta-2-300x300.png" />
+    <Content Include="images\quoto-1-200x200.jpg" />
+    <Content Include="images\quoto-2-200x200.jpg" />
+    <Content Include="images\quoto-3-200x200.jpg" />
+    <Content Include="images\seller-2-200x200.png" />
+    <Content Include="images\seller-3-200x200.png" />
+    <Content Include="images\seller-4-200x200.png" />
+    <Content Include="images\seller-5-200x200.png" />
+    <Content Include="images\seller-6-200x200.png" />
+    <Content Include="images\seller-7-200x200.png" />
+    <Content Include="images\sellers-1-1600x1600.jpg" />
+    <Content Include="images\sidebar-1-400x600.jpg" />
+    <Content Include="images\sidebar-2-400x600.jpg" />
+    <Content Include="images\sidebar-3-200x200.jpg" />
+    <Content Include="images\sidebar-4-200x200.jpg" />
+    <Content Include="images\sidebar-5-200x200.jpg" />
+    <Content Include="images\slider_1_1920_1200.jpg" />
+    <Content Include="images\slider_2_1920_600.jpg" />
+    <Content Include="images\slider_3_1920_600.jpg" />
+    <Content Include="images\slider_4_1920_600.jpg" />
+    <Content Include="images\slider_5_1920_600.jpg" />
+    <Content Include="images\slider_6_1920_600.jpg" />
+    <Content Include="images\story_bg_1.png" />
+    <Content Include="images\story_bg_2.png" />
+    <Content Include="images\triangle_bg.png" />
+    <Content Include="images\triangle_bg_black.png" />
+    <Content Include="plugin-frameworks\bootstrap.min.css" />
+    <Content Include="plugin-frameworks\bootstrap.min.js" />
+    <Content Include="plugin-frameworks\jquery-3.2.1.min.js" />
+    <Content Include="plugin-frameworks\jquery.waypoints.min.js" />
+    <Content Include="plugin-frameworks\progressbar.min.js" />
+    <Content Include="plugin-frameworks\swiper.css" />
+    <Content Include="plugin-frameworks\swiper.js" />
+    <Content Include="plugin-frameworks\tether.min.js" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="fonts\beyond_the_mountains-webfont.woff" />
+    <Content Include="fonts\beyond_the_mountains-webfont.woff2" />
+    <Content Include="fonts\ionicons.eot" />
+    <Content Include="fonts\ionicons.ttf" />
+    <Content Include="fonts\ionicons.woff" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\Productos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -191,7 +257,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50409</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

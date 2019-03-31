@@ -1,46 +1,84 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <title>Luigi's</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="~/fonts/beyond_the_mountains-webfont.css" type="text/css" />
+    <!-- Stylesheets -->
+    <link href="~/plugin-frameworks/bootstrap.min.css" rel="stylesheet">
+    <link href="~/plugin-frameworks/swiper.css" rel="stylesheet">
+    <link href="~/fonts/ionicons.css" rel="stylesheet">
+    <link href="~/common/styles.css" rel="stylesheet">
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <header>
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Quiero Pizza", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        @Html.ActionLink("Inicio", "Index", "Home")
-                    </li>
-                    <li>
-                        @Html.ActionLink("Lista de Productos", "Index", "Productos")
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+            <a class="logo" href="#"><img src="~/images/logo-white.png" alt="Logo"></a>
+            <div class="right-area">
+                <h6><a class="plr-20 color-white btn-fill-primary" href="#">ORDENAR: (504) 99885577</a></h6>
+            </div><!-- right-area -->
+            <a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+            <ul class="main-menu font-mountainsre" id="main-menu">
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+            </ul>
+            <div class="clearfix"></div>
+        </div><!-- container -->
+    </header>
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    <section class="bg-5 h-500x main-slider pos-relative">
+        <div class="triangle-up pos-bottom"></div>
+        <div class="container h-100">
+            <div class="dplay-tbl">
+                <div class="dplay-tbl-cell center-text color-white pt-90">
+                    <h5><b>LOS MEJORES EN LA CIUDAD</b></h5>
+                    <h2 class="mt-30 mb-15">Menu</h2>
+                </div><!-- dplay-tbl-cell -->
+            </div><!-- dplay-tbl -->
+        </div><!-- container -->
+    </section>
+
+    @RenderBody()
+
+    <footer class="pb-50  pt-70 pos-relative">
+        <div class="pos-top triangle-bottom"></div>
+        <div class="container-fluid">
+            <a href="index.html"><img src="~/images/logo-white.png" alt="Logo"></a>
+            <div class="pt-30">
+                <p class="underline-secondary"><b>Direccion:</b></p>
+                <p>481 Creekside Lane Avila Beach, CA 93424 </p>
+            </div>
+            <div class="pt-30">
+                <p class="underline-secondary mb-10"><b>Telefono:</b></p>
+                <a href="tel:+53 345 7953 32453 ">+53 345 7953 32453 </a>
+            </div>
+            <div class="pt-30">
+                <p class="underline-secondary mb-10"><b>Correo Electronico:</b></p>
+                <a href="mailto:yourmail@gmail.com"> yourmail@gmail.com</a>
+            </div>
+            <ul class="icon mt-30">
+                <li><a href="#"><i class="ion-social-pinterest"></i></a></li>
+                <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                <li><a href="#"><i class="ion-social-dribbble-outline"></i></a></li>
+                <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
+                <li><a href="#"><i class="ion-social-vimeo"></i></a></li>
+            </ul>
+            <p class="color-light font-9 mt-50 mt-sm-30">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div><!-- container -->
+    </footer>
+    <!-- SCIPTS -->
+    <script src="~/plugin-frameworks/jquery-3.2.1.min.js"></script>
+    <script src="~/plugin-frameworks/bootstrap.min.js"></script>
+    <script src="~/plugin-frameworks/swiper.js"></script>
+    <script src="~/common/scripts.js"></script>
 </body>
 </html>
