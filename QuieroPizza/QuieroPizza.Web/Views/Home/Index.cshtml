@@ -4,9 +4,21 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Bienvenidos a Quiero Pizza</h2>
-
-@foreach (var item in Model)
-{
-    <p>@item.Descripcion</p>
-}
+<div class="heading"><h3>Seleccione su Pizza</h3></div>
+<div class="row">
+    @foreach (var producto in Model)
+        {
+        if (producto.Categoria.Descripcion == "Pizzas") {
+                <div class="col-lg-3 col-md-4  col-sm-6 ">
+            <div class="center-text mb-30">
+                <div class="ïmg-200x mlr-auto pos-relative">
+                    <h6 class="ribbon-cont color-white"><div class="ribbon primary"></div><b>OFFER</b></h6>
+                    <img src="http://localhost:50410@(producto.UrlImagen)" alt="">
+                </div>
+                <h5 class="mt-20">@producto.Descripcion</h5>
+                <h4 class="mt-5 color-primary"><b>L @producto.Precio</b></h4>
+            </div><!--text-center-->
+        </div><!-- col-md-3 -->
+        }
+    }
+</div><!-- row-->

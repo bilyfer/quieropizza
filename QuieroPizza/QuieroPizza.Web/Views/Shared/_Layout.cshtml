@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <!-- Font -->
-    <link href="https://~/fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="~/fonts/beyond_the_mountains-webfont.css" type="text/css" />
     <!-- Stylesheets -->
     <link href="~/plugin-frameworks/bootstrap.min.css" rel="stylesheet">
@@ -15,7 +15,6 @@
     <link href="~/common/styles.css" rel="stylesheet">
 </head>
 <body>
-    @RenderBody()
     <header>
         <div class="container">
             <a class="logo" href="#"><img src="~/images/logo-white.png" alt="Logo"></a>
@@ -48,43 +47,7 @@
 
     <section class="story-area left-text center-sm-text">
         <div class="container">
-            <div class="heading"><h3>Seleccione su Pizza</h3></div>
-            <div class="row">
-                <div class="col-lg-3 col-md-4  col-sm-6 ">
-                    <div class="center-text mb-30">
-                        <div class="ïmg-200x mlr-auto pos-relative">
-                            <h6 class="ribbon-cont color-white"><div class="ribbon primary"></div><b>OFFER</b></h6>
-                            <img src="~/images/seller-2-200x200.png" alt="">
-                        </div>
-                        <h5 class="mt-20">Pizza Margherita</h5>
-                        <h4 class="mt-5 color-primary"><b>$11.90</b></h4>
-                    </div><!--text-center-->
-                </div><!-- col-md-3 -->
-                <div class="col-lg-3 col-md-4  col-sm-6 ">
-                    <div class="center-text mb-30">
-                        <div class="ïmg-200x mlr-auto pos-relative"><img src="~/images/seller-2-200x200.png" alt=""></div>
-                        <h5 class="mt-20">Pizza Margherita</h5>
-                        <h4 class="mt-5 color-primary"><b>$11.90</b></h4>
-                    </div><!--text-center-->
-                </div><!-- col-md-3 -->
-                <div class="col-lg-3 col-md-4  col-sm-6 ">
-                    <div class="center-text mb-30">
-                        <div class="ïmg-200x mlr-auto pos-relative"><img src="~/images/seller-2-200x200.png" alt=""></div>
-                        <h5 class="mt-20">Pizza Margherita</h5>
-                        <h4 class="mt-5 color-primary"><b>$11.90</b></h4>
-                    </div><!--text-center-->
-                </div><!-- col-md-3 -->
-                <div class="col-lg-3 col-md-4  col-sm-6 ">
-                    <div class="center-text mb-30">
-                        <div class="ïmg-200x mlr-auto pos-relative">
-                            <h6 class="ribbon-cont color-white"><div class="ribbon secondary"></div><b>SPECIALITY</b></h6>
-                            <img src="~/images/seller-2-200x200.png" alt="">
-                        </div>
-                        <h5 class="mt-20">Pizza Margherita</h5>
-                        <h4 class="mt-5 color-primary"><b>$11.90</b></h4>
-                    </div><!--text-center-->
-                </div><!-- col-md-3 -->
-            </div><!-- row-->
+            @RenderBody()
         </div><!-- container -->
     </section>
     <section class="bg-lite-blue">
