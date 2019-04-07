@@ -3,6 +3,8 @@
     Layout = "~/Views/Shared/_LayoutLogin.cshtml";
 }
 
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
 <form method="post" action="/Login/Index">
     <div class="col-xs-12">
         <div class="form-group">
@@ -22,4 +24,5 @@
     </div><div class="col-xs-6">
         <button type="submit" class="btn btn-block btn-primary">Ingresar</button>
     </div>
+    
 </form>

@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace QuieroPizza.WebAdmin.Controllers
 {
+    [Authorize]
     public class ClientesController : Controller
     {
         ClientesBL _clientesBL;
