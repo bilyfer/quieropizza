@@ -25,6 +25,7 @@ namespace QuieroPizza.BL
         [Required(ErrorMessage = "Ingrese el precio")]
         [Range(0, 1000, ErrorMessage = "Ingrese un precio entre 0 y 1000")]
         public double Precio { get; set; }
+        
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
 
